@@ -1,0 +1,84 @@
+{
+  "news": [
+    {
+      "header": "Microsoft is starting a private beta for its iPhone keyboard",
+      "body": "Microsoft has its own mobile operating system, but that hasn't stopped it from opening a public beta for a new iPhone keyboard.",
+      "date": "2016-04-14T08:40:23.449Z"
+    },
+    {
+      "header": "Microsoft sues U.S. government over data gag orders",
+      "body": "Microsoft wants a federal court to invalidate part of a 1986 law that it alleged has been abused by the government when authorities demand customers' data.",
+      "date": "2016-03-14T08:40:23.449Z"
+    },
+    {
+      "header": "Why AI still needs us: To build quantum computers",
+      "body": "We humans may still be licking our wounds following AI's victory at the ancient game of Go, but it turns out we still have something to be proud of.",
+      "date": "2016-03-14T08:40:24.449Z"
+    },
+    {
+      "header": "Secretive Intel quietly woos makers in China",
+      "body": "Intel's launched new robotics and drone developer kits at the low-key IDF trade show in Shenzhen.",
+      "date": "2016-02-14T08:40:23.449Z"
+    },
+    {
+      "header": "Microsoft sues US government over secret requests for user data",
+      "body": "Microsoft has sued the U.S. government in an attempt to strike down a law allowing judges to gag tech companies when law enforcement agencies want access to their users' data.",
+      "date": "2016-04-14T09:40:23.449Z"
+    },
+    {
+      "header": "EU gives companies two years to comply with sweeping new privacy laws",
+      "body": "Companies could face massive fines in 25 European Union countries if they mishandle citizens' personal information, under a new privacy law due to take effect in 2018.",
+      "date": "2016-01-14T08:40:23.449Z"
+    },
+    {
+      "header": "Ransomware authors use the bitcoin blockchain to deliver encryption keys",
+      "body": "Ransomware authors are using the bitcoin blockchain, which serves as the cryptocurrency's public transaction ledger, to deliver encryption keys to users.",
+      "date": "2016-04-12T08:40:23.449Z"
+    },
+    {
+      "header": "Renogy's solar generator charges in 3 hours, offers 900 watt hours of power",
+      "body": "Solar energy company Renogy today announced a mobile generator that uses a solar panel to charge in as little as three hours, and has an interchangeable battery, enabling longer use.",
+      "date": "2016-04-14T10:40:23.449Z"
+    },
+    {
+      "header": "Lack of confidence proving to be real killer for women in technology",
+      "body": "A pair of studies released this week shed light on challenges -- including career advancement and equal pay -- facing women in technology.",
+      "date": "2016-04-13T08:40:23.449Z"
+    },
+    {
+      "header": "Internet of pants? This ultrathin thread could make your clothes part of the IoT",
+      "body": "Your clothes could one day monitor your fitness levels or boost your smartphone reception thanks to a new technique that uses ultrathin electronic thread to embroider circuits into fabric.",
+      "date": "2016-04-01T08:40:23.449Z"
+    },
+    {
+      "header": "Cyberattack could knock out huge swath of US electric grid, lawmakers say",
+      "body": "The U.S. government is not prepared for a cyberattack on the electrical grid that takes out power over a large area for weeks, or even months, some lawmakers said.",
+      "date": "2016-04-13T08:40:23.449Z"
+    },
+    {
+      "header": "Google Photos update brings emoji search, manual backup for local images and video",
+      "body": "Emoji search is a neat exercise in image recognition, though it's unlikely to be useful for serious search queries.",
+      "date": "2016-03-11T08:40:23.449Z"
+    },
+    {
+      "header": "Sharp's robot smartphone coming in May for $1,800",
+      "body": "Japan's Sharp will launch in May a smartphone that's built into a humanoid robot. Or is it a humanoid robot with a built-in smartphone?",
+      "date": "2016-03-13T08:40:23.449Z"
+    },
+    {
+      "header": "Chrome abandons XP, Vista and older versions of OS X",
+      "body": "Google released Chrome 50, and as promised last year, dropped support for Windows XP and Vista, along with three older editions of Apple's OS X.",
+      "date": "2016-03-16T08:40:23.449Z"
+    },
+    {
+      "header": "EU plan to collect, not share, air traveler data is ‘absurd'",
+      "body": "Air passengers entering or leaving the European Union will have their movements kept on file by police authorities from 2018 under draft legislation approved by the European Parliament.",
+      "date": "2016-03-10T08:40:23.449Z"
+    },
+    {
+      "header": "Optional Windows update aims to protect Microsoft wireless mice against hijacking",
+      "body": "Microsoft issued an optional update to protect Windows computers against an attack that could hijack wireless mice to execute malicious commands.",
+      "date": "2016-02-11T08:40:25.449Z"
+    }
+  ]
+}

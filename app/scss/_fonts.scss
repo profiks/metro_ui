@@ -1,0 +1,13 @@
+// *** font path ***
+
+@font-face {
+    font-family: 'HelveticaNeue-UltraLight';
+    src: url('../fonts/HelveticaNeue-UltraLight.eot'); 
+    src: url('../fonts/HelveticaNeue-UltraLight.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/HelveticaNeue-UltraLight.woff') format('woff'),
+         url('../fonts/HelveticaNeue-UltraLight.ttf') format('truetype'),
+         url('../fonts/HelveticaNeue-UltraLight.svg?#HelveticaNeue-UltraLight') format('svg');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,379 @@
+/*******************************************************************************
+***
+***   Dear friend :
+***   When I wrote this code, only I and God knew what it was.
+***
+***   But now only God knows what is here ! 
+***   
+***   So, if you done trying to 'optimize' this code,
+***   please include this comment as a warning for the next guy who also will  
+***   trying to do this.
+***
+***   Author : denys.ark@gmail.com
+***
+********************************************************************************/
+
+
+@import 'functions';
+@import 'reset';
+@import 'variables';
+@import 'fonts';
+
+
+
+
+
+
+// ***** body *****
+body{
+    background-color: $background;
+    overflow-x: hidden;
+    
+    font: 100 1em 'HelveticaNeue-UltraLight', sans-serif;
+    color: $white;
+} // body
+
+
+
+
+
+
+// ***** wrapper *****
+.wrapper{
+    background: url(../img/pattern.png) repeat center $background;
+    background-size: contain;
+}// .wrapper
+
+
+
+
+
+
+// ***** container *****
+.container{
+    width: 100%;   
+    min-height: 100vh;
+    
+    
+    margin: 0 auto;
+    padding: 0 10px;
+    
+    &:before{
+        content: '';
+        display: table;
+    }
+    
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+}// .container
+
+
+
+
+
+
+
+// ***** page-title *****
+.page-title{ 
+    &__heading{
+        font-size: em(50);
+        margin-top: 40px;
+        margin-bottom: 35px;      
+        
+        text-align: center;        
+    }
+}// .page-title
+
+
+
+
+
+
+// ***** tiles *****
+.tiles{
+    width: 100%;
+    margin-bottom: 85px;    
+}// .tiles
+
+
+
+
+
+
+
+// ***** tile *****
+.tile{
+    width: 100%;
+    height: 150px;
+    margin: 5px 0;
+    padding: 10px;
+    overflow: hidden;
+    float: left;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    
+    color: $white;
+    text-decoration: none;      
+    
+    &__ico{
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+    
+    &__name{
+        font-size: em(18);
+        text-align: center;
+    }
+    
+    
+    &--lg{
+        width: 100%;       
+    }
+    
+    &--xl{
+        width: 100%;
+    }
+    
+    &--home{
+       background-color: $home; 
+    }
+    
+    &--about{
+        background-color: $about; 
+    }
+    
+    &--portfolio{
+        background-color: $portfolio; 
+    }
+    
+    &--photos{
+        background-color: $photos; 
+    }
+    
+    &--testimonials{
+        background-color: $testimonials; 
+    }
+    
+    &--hire{
+        background-color: $hire; 
+    }
+    
+    &--contact{
+        background-color: $contact; 
+    }
+    
+}// .tile
+
+
+
+
+
+
+
+// ***** icons sprite *****
+
+[class*="ico"] {
+    display: flex; 
+    
+    &:after{
+        content: '';
+        display: block;
+    }
+}
+
+.ico{
+    
+    &--home{
+        &:after{
+            background-image: url(../img/sprite/home.png#sprite);        
+            width: 52px;
+            height: 54px;
+        }
+    }
+    
+    &--about{
+        &:after{
+            background-image: url(../img/sprite/about.png#sprite);
+            width: 50px;
+            height: 63px;
+        }
+    }
+    
+    &--portfolio{
+        &:after{
+            background-image: url(../img/sprite/portfolio.png#sprite);
+            width: 57px;
+            height: 53px;
+        }
+    }
+    
+    &--photos{
+        &:after{
+            background-image: url(../img/sprite/photos.png#sprite);
+            width: 58px;
+            height: 54px;
+        }
+    }
+    
+    &--testimonials{
+        &:after{
+            background-image: url(../img/sprite/testimonials.png#sprite);
+            width: 55px;
+            height: 47px;
+        }
+    }
+    
+    &--hire{
+        &:after{
+            background-image: url(../img/sprite/hire.png#sprite);
+            width: 54px;
+            height: 67px;
+        }
+    }
+    
+    &--contact{
+        &:after{
+            background-image: url(../img/sprite/contact.png#sprite);
+            width: 68px;
+            height: 39px;
+        }
+    }
+    
+    &--facebook{
+        &:after{
+            background-image: url(../img/sprite/facebook.png#sprite);
+            width: 32px;
+            height: 32px;
+        }
+    }
+    
+    
+     &--twitter{
+         &:after{
+            background-image: url(../img/sprite/twitter.png#sprite);
+            width: 32px;
+            height: 32px;
+         }
+    }
+    
+     &--gplus{
+         &:after{
+            background-image: url(../img/sprite/gplus.png#sprite);
+            width: 32px;
+            height: 32px;
+         }
+    } 
+    
+}//  .ico__*
+
+
+
+
+// ***** news-feed *****
+.news-feed{
+    padding: 0;
+    height: auto;
+        
+    &__poster{
+        width: 100%;
+        height: auto;
+        float: left;        
+    }
+    
+    &__content{        
+        width: 100%;
+        height: 150px;
+        float: left;
+        padding: 15px;
+        background-color: $blog;
+        margin-top: 10px;
+        
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;        
+    }
+    
+    &__header{
+        font-size: em(22);
+    }
+    
+    &__body{
+        font-size: em(16);
+        display: none;
+    }
+    
+    &__date{
+        color: $gray;
+        font-size: em(12);
+    }
+    
+}// .news-feed
+
+
+
+
+
+
+// ***** page-footer *****
+.page-footer{
+    width: 100%;  
+    
+    &__copyright{
+        font-size: em(14);
+        color: $copyright;
+        margin-top: 10px;
+        
+        text-align: center;
+    }
+    
+}// .page-footer
+
+
+
+
+
+
+
+// ***** social *****
+.social{    
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    
+    &__link{        
+        width: 75px;
+        height: 75px;
+        margin: 5px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &--facebook{
+            background-color: $facebook;
+        }
+        
+        &--twitter{
+            background-color: $twitter;
+        }
+        
+        &--gplus{
+            background-color: $gplus;
+        }
+    }
+}// social
+
+
+
+
+@import 'media-queries';

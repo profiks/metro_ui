@@ -1,0 +1,159 @@
+// ***** 320px *****
+@media only screen and (min-width : $mobile) {
+    
+    // mobile first
+    
+} // end media query 320px
+
+
+
+
+
+
+// ***** 480px *****
+@media only screen and (min-width : $mobile--lg) {    
+    
+    .container{
+        max-width: $mobile--lg;
+        padding: 0;
+    }
+    
+    .tiles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tile{
+        width: 150px;
+        margin: 5px;
+    }
+    
+    
+    .news-feed{
+        width: 310px;
+    }
+    
+    
+}// end media query 480px
+
+
+
+
+
+
+
+
+// ***** 768px *****
+@media only screen and (min-width : $tablet) {
+    
+     .container{
+        max-width: 640px;
+         
+        display: flex;
+        flex: 1;
+        flex-direction: column;    
+        justify-content: center; 
+    }
+    
+    
+    .page-title{
+        padding-left: 5px;
+        padding-right: 5px;
+        
+        &__heading{     
+            text-align: left;
+        }
+    }
+    
+    
+    .tile{
+        &__name{
+            text-align: left;
+        }
+        
+        &--lg{
+            width: 310px;
+        }
+        
+        &--xl{
+            width: 470px;
+        }
+    
+    }
+    
+    .news-feed{
+        height: 150px;
+        flex-direction: row;
+        
+        &__poster{
+            width: 150px;
+            height: 150px;
+        }
+        
+        &__content{
+            width: 310px;
+            margin: 0;
+        }
+        
+        .tile__name{
+            text-align: center;
+        }
+        
+    }
+    
+    .page-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__copyright{
+            white-space: nowrap;
+            text-align: left;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    
+    .social{ 
+        justify-content: flex-start;
+    }
+    
+    
+}// end media query 768px
+
+
+
+
+
+
+
+
+// ***** 996px *****
+@media only screen and (min-width : $desktop--sm) {
+    
+    .wrapper{
+        background-size: initial;
+    }// .wrapper
+    
+    .container{
+        max-width: $desktop--sm;
+        padding: 0 18px;
+    }
+    
+    .page-title{
+        &__heading{     
+            font-size: em(65);
+            margin-top: 90px;
+            margin-bottom: 85px;
+        }
+    }// .page-title
+    
+}// end media query 996px
+
+
+
+
+
