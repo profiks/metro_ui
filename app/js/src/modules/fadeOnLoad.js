@@ -1,4 +1,4 @@
-var fadeOnLoad = {    
+export var fadeOnLoad = {    
 
     init : function(){
         this.pageLoad();
@@ -38,7 +38,5 @@ var fadeOnLoad = {
         
     }
 
- }; 
+ };
 
-
-fadeOnLoad.init();

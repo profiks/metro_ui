@@ -5,13 +5,16 @@ import autoprefixer from 'autoprefixer';
 import easysprite from 'postcss-easysprites';
 import sourcemaps from 'gulp-sourcemaps';
 import connect from 'gulp-connect';
-import babel from 'gulp-babel';
-import concat from 'gulp-concat';
+import babelify from 'babelify';
+import browserify from 'browserify';
+import sourceStream from 'vinyl-source-stream';
+import buffer from 'vinyl-buffer';
+import uglify from 'gulp-uglify';
+import gulpif from 'gulp-if';
 
 
 
-
-const ENV = 'development';
+const ENV = 'production';
 
 const processors = [
    //autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions', 'Firefox > 14', 'Opera > 11.1', 'Android >= 4.1', 'Safari >= 7', 'iOS >= 5']}),
@@ -22,13 +25,15 @@ const processors = [
    })
 ];
 
-let sassStyle;
+let sassStyle, jsDebug;
 
 
 if(ENV === 'production'){
     sassStyle = 'compressed';
+    jsDebug = true;
 } else{
     sassStyle = 'expanded';
+    jsDebug = false;
 } 
 
 
@@ -37,7 +42,7 @@ gulp.task('css', () => {
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: sassStyle}).on('error', sass.logError))  
         .pipe(postcss(processors))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('app/css'))
         .pipe(connect.reload());
 });
@@ -51,15 +56,18 @@ gulp.task('html', () => {
 
 
 
-gulp.task('js', () => { 
-    return gulp.src('./app/js/src/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-    .pipe(concat('bundle.js'))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('app/js'))
+
+gulp.task('js', () => {   
+    return browserify('./app/js/src/app.js', { debug: true })        
+        .transform(babelify)
+        .bundle()        
+        .on('error', function(err) { console.error(err); this.emit('end'); })
+        .pipe(sourceStream('bundle.js'))        
+        .pipe(buffer())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(gulpif(jsDebug, uglify()))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./app/js'))
         .pipe(connect.reload());
 });
 

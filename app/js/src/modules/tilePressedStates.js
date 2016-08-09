@@ -1,4 +1,4 @@
-var tilePressedStates = {    
+export var tilePressedStates = {    
     
     init : function () {
        this.cacheDom();
@@ -81,8 +81,6 @@ var tilePressedStates = {
     
 };
 
-
-tilePressedStates.init();
 
 
 

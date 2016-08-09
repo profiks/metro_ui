@@ -1,4 +1,4 @@
-var newsFeed = {
+export var newsFeed = {
     
     init : function() {
        this.newsUrl = 'js/news.json';
@@ -108,6 +108,4 @@ var newsFeed = {
     }
     
     
-}
-
-newsFeed.init();
+};
