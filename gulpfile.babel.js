@@ -33,7 +33,7 @@ if(ENV === 'production'){
 
 
 gulp.task('css', () => { 
-    return gulp.src('app/scss/**/*.scss')
+    return gulp.src('./app/scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: sassStyle}).on('error', sass.logError))  
         .pipe(postcss(processors))
@@ -45,22 +45,25 @@ gulp.task('css', () => {
 
 
 gulp.task('html', () => { 
-  gulp.src('app/**/*.html')
+  gulp.src('./app/**/*.html')
     .pipe(connect.reload());
 });
 
 
+
 gulp.task('js', () => { 
-    gulp.src('app/js/src/*.js')
+    return gulp.src('./app/js/src/*.js')
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['es2015']
         }))
-        .pipe(concat('bundle.js'))
+    .pipe(concat('bundle.js'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('app/js'))
         .pipe(connect.reload());
 });
+
+
 
 
 gulp.task('watch', () => { 

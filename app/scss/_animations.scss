@@ -1,0 +1,16 @@
+.tile--transform-top {
+          transform: perspective(500px) rotateX(0.138372rad) !important;
+}
+
+.tile--transform-bottom {
+          transform: perspective(500px) rotateX(-0.138372rad) !important;
+}
+
+.tile--transform-left {
+          transform: perspective(500px) rotateY(-0.138372rad) !important;
+}
+
+.tile--transform-right {
+          transform: perspective(500px) rotateY(0.138372rad) !important;
+}
+

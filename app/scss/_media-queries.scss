@@ -2,6 +2,7 @@
 @media only screen and (min-width : $mobile) {
     
     // mobile first
+
     
 } // end media query 320px
 
@@ -69,6 +70,17 @@
     
     
     .tile{
+        outline: 3px solid transparent;
+        
+        position: relative;
+        z-index: 999;
+        
+        
+        &:hover{
+            outline: 3px solid $outline;
+            z-index: 1000;
+        }
+        
         &__name{
             text-align: left;
         }
@@ -87,18 +99,18 @@
         height: 150px;
         flex-direction: row;
         
+         &:hover{
+            outline: none;
+        }
+        
         &__poster{
+            display: block;
             width: 150px;
             height: 150px;
         }
         
         &__content{
-            width: 310px;
-            margin: 0;
-        }
-        
-        .tile__name{
-            text-align: center;
+            width: 320px;
         }
         
     }

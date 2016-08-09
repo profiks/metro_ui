@@ -14,10 +14,20 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Custom style -->
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/style.css"> 
+    
+    <noscript>
+        <style>
+            .tile{
+                opacity: 1;
+                transform: scale(1);
+            }
+        </style>    
+    </noscript>  
+             
 </head>
 <body> 
-    
+       
     <div class="wrapper">   
     <div class="container">
         
@@ -62,12 +72,27 @@
             
              <a href="#" class="tile tile--xl tile--blog news-feed">                
                 <img src="img/poster.jpg" class="news-feed__poster">  
-                <div class="news-feed__content">
-                    <h2 class="tile__name">Blog</h2> 
-                    <h3 class="news-feed__header">Chrome abandons XP, Vista and older versions of OS X</h3>
-                    <h3 class="news-feed__body">Emoji search is a neat exercise in image recognition, though it's unlikely to be useful for serious search queries.</h3>
-                    <h4 class="news-feed__date">2016-03-11</h4>                    
+                
+                <div class="news-feed__wrap" id="newsCard">
+                    
+                    <div class="news-feed__content">
+                   
+                        <div class="news-feed__front">
+                            <h2 class="tile__name">Blog</h2>
+                            <h3 class="news-feed__header">20+ Best Examples of Coming Soon Page Design</h3>                    
+                            <h4 class="news-feed__date">2016-03-11</h4> 
+                        </div>
+
+                        <div class="news-feed__back">
+                            <h3 class="news-feed__body">20+ Best Examples of Coming Soon Page Design</h3> 
+                        </div>
+
+                    </div>
+                    
                 </div>
+                
+                
+                
              </a>
             
              <a href="#" class="tile tile--contact">                
@@ -79,9 +104,9 @@
             <footer class="page-footer">            
            
                <ul class="social">
-                   <li class="social__item"><a href="#" class="social__link social__link--facebook"><span class="ico--facebook"></span></a></li>
-                   <li class="social__item"><a href="#" class="social__link social__link--twitter"><span class="ico--twitter"></span></a></li>
-                   <li class="social__item"><a href="#" class="social__link social__link--gplus"><span class="ico--gplus"></span></a></li>
+                   <li class="social__item"><a href="#" class="tile tile--xs social__link social__link--facebook"><span class="ico--facebook"></span></a></li>
+                   <li class="social__item"><a href="#" class="tile tile--xs social__link social__link--twitter"><span class="ico--twitter"></span></a></li>
+                   <li class="social__item"><a href="#" class="tile tile--xs social__link social__link--gplus"><span class="ico--gplus"></span></a></li>
                </ul>
 
 
@@ -95,7 +120,7 @@
         
     </div> <!-- /.container -->   
     </div> <!-- /.wrapper -->
-        
+               
    <script src="js/bundle.js"></script>   
 </body>
 </html>
