@@ -11,11 +11,15 @@ export var tilePressedStates = {
     
     eventListner : function(){
         
+        this.clickStart = ('ontouchstart' in window ? 'touchstart' : 'mousedown');
+        this.clickEnd = ('ontouchstart' in window ? 'touchend' : 'mouseup');
+        
+        
         for (var i = 0; i < this.tile.length; i++) {
             
-            this.tile[i].addEventListener('mousedown', this.addTransform, false);
+            this.tile[i].addEventListener(this.clickStart, this.addTransform, false);
             
-            this.tile[i].addEventListener('mouseup', this.removeTransform, false);
+            this.tile[i].addEventListener(this.clickEnd, this.removeTransform, false);
             
             this.tile[i].addEventListener("click", this.pauseClick, false);
         }
@@ -25,10 +29,17 @@ export var tilePressedStates = {
     
     addTransform : function (e)  {              
         let self = this;
-                
+        
+        this.client = ('ontouchstart' in window ? 'mobile' : 'pc');        
+        this.dev = e;
+        
+        if(this.client == 'mobile'){
+            this.dev = e.touches[0];
+        }
+        
         this.dim = {
-            x : e.clientX - this.offsetLeft,
-            y : e.clientY - this.offsetTop,
+            x : this.dev.clientX - this.offsetLeft,
+            y : this.dev.clientY - this.offsetTop,
             w : this.offsetWidth,
             h : this.offsetHeight
         };
