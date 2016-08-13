@@ -1,8 +1,8 @@
 export var newsFeed = {
     
     init : function() {
-       this.newsUrl = 'js/news.json';
-       this.loadNews();
+        this.newsUrl = 'js/news.json';
+        this.loadNews();
     },
     
     loadNews : function(){
@@ -25,30 +25,31 @@ export var newsFeed = {
         
         this.actualJSON = this.newsFeed.news;
         this.newsCount = this.actualJSON.length;
-       
-        this.actualJSON.forEach( function (item){ 
-                
+               
+        this.actualJSON.sort(function(a,b) {
+            let d1 = new Date(a.date);
+            let d2 = new Date(b.date);
+            return  d2.getMonth() - d1.getMonth();
+        });  
+        
+        this.actualJSON.forEach( function (item){  
+            
                 that.news.header = item.header,
                 that.news.body = item.body,
                 that.news.date = item.date;
                 that.news.date = new Date(that.news.date);
-                that.news.date = that.news.date.getFullYear()+'-' + (that.news.date.getMonth()+1) + '-'+that.news.date.getDate();            
+                that.news.date = that.news.date.getFullYear() + '-' + (that.news.date.getMonth()+1) + '-' + that.news.date.getDate();            
                 
                 that.renderNews(that.news);
         });
-        
         
         this.slideInterval(this.newsCount);
        
     },
     
-    sortNews : function(newsFeed){
-        
-    },
-    
     renderNews : function(news){        
         
-        this.output = document.getElementById('newsCard'); 
+        this.output = document.getElementById('newsCard');
         
         this.content = `<div class="news-feed__content">`;
         
@@ -62,8 +63,8 @@ export var newsFeed = {
         this.content += `<h3 class="news-feed__body">${news.body}</h3>`;
         this.content += `</div>`; 
         
-        this.content += `</div>`; 
-                    
+        this.content += `</div>`;
+        
         this.output.innerHTML += this.content;
     },
     
@@ -79,7 +80,7 @@ export var newsFeed = {
                 self.position += self.step;
                 self.output.style.top = `-${self.position}px`;
 
-                if(self.position == ((newsCount * 150) - 150) ){
+                if(self.position == ((newsCount * 150)) ){
                     self.resetSlider();
                 } 
             } 
